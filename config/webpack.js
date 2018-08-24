@@ -19,6 +19,15 @@ module.exports = {
         exclude: /node_modules/,
         loaders: ["babel-loader"],
       },
+      {
+        test: /\.(glsl|vs|fs)$/,
+        loader: 'shader-loader',
+        options: {
+          glsl: {
+            chunkPath: resolve("/glsl/chunks")
+          }
+        }
+      }
     ],
   },
   plugins: [
