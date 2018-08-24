@@ -1,1 +1,4 @@
-*.html
+**/lib/**
+**/package.json
+**/webpack.config.js
+

@@ -7,7 +7,7 @@ const getRoot = () => {
   return root;
 };
 
-export const makeCanvas = (attributes) => {
+export const makeCanvas = attributes => {
   const attributeKeys = Object.keys(attributes);
   const canvas = document.createElement('canvas');
   for (let i = 0; i < attributeKeys.length; i++) {
@@ -15,6 +15,5 @@ export const makeCanvas = (attributes) => {
     canvas.setAttribute(key, attributes[key]);
   }
   canvas.innerText = 'Please use a browser that supports HTML5 Canvas';
-  getRoot().appendChild(canvas)
+  getRoot().appendChild(canvas);
 };
-

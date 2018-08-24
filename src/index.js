@@ -5,12 +5,10 @@ function onWindowLoad() {
   makeCanvas({
     id: 'theCanvas',
     width: 400,
-    height: 400, 
+    height: 400,
   });
 
   example();
 }
 
 window.addEventListener('load', onWindowLoad);
-
-

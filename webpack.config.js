@@ -17,17 +17,17 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ["babel-loader"],
+        loaders: ['babel-loader'],
       },
       {
         test: /\.(glsl|vs|fs)$/,
         loader: 'shader-loader',
         options: {
           glsl: {
-            chunkPath: path.resolve("/glsl/chunks")
-          }
-        }
-      }
+            chunkPath: path.resolve('/glsl/chunks'),
+          },
+        },
+      },
     ],
   },
   plugins: [
@@ -36,5 +36,5 @@ module.exports = {
       title: 'Web Sample',
       template: './public/index.html',
     }),
-  ]
+  ],
 };
