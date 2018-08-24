@@ -10,7 +10,7 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, buildDir)
+    path: buildDir,
   },
   module: {
     rules: [
@@ -24,7 +24,7 @@ module.exports = {
         loader: 'shader-loader',
         options: {
           glsl: {
-            chunkPath: resolve("/glsl/chunks")
+            chunkPath: path.resolve("/glsl/chunks")
           }
         }
       }
@@ -34,7 +34,7 @@ module.exports = {
     new CleanWebpackPlugin([buildDir]),
     new HtmlWebpackPlugin({
       title: 'Web Sample',
-      template: './public/index.html'
+      template: './public/index.html',
     }),
   ]
 };
